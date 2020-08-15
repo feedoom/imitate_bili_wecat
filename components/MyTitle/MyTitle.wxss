@@ -1,0 +1,33 @@
+.MyTitle{
+    display: flex;
+    align-items: center;
+    padding: 10rpx;
+    background-color: white;
+}
+.logo{
+    flex: 7;
+    padding: 0rpx 5rpx;
+}
+.search{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.download_app{
+    flex: 3;
+    font-size: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    color: white;
+    border-radius: 10rpx;
+    padding: 10rpx;
+}

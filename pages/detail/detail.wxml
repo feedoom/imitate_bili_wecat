@@ -1,0 +1,46 @@
+<view class="main">
+    <MyTitle></MyTitle>
+    <view class="info">
+        <video src="{{videoInfo.videoSrc}}" controls></video>
+        <view class="video_title">
+            <text>{{videoInfo.videoTitle}}</text>
+            <text class="fa fa-angle-down"></text>
+        </view>
+        <view class="video_detail">
+            <text class="author">{{videoInfo.author}}</text>
+            <text class="play_count">{{videoInfo.playCount}}</text>
+            <text class="comment_count">{{videoInfo.commentCount}}</text>
+            <text class="date">{{videoInfo.date}}</text>
+        </view>
+    </view>
+    <view class="other_list">
+        <navigator wx:for="{{otherList}}" wx:key="index" class="item_other">
+            <view class="other_img_wrap">
+                <image src="{{item.imgSrc}}" mode="widthFix"></image>
+            </view>
+            <view class="other_info">
+                <view class="other_title">{{item.title}}</view>
+                <view class="other_detail">
+                    <text class="play_count" decode="{{true}}">{{item.playMsg}}万次观看&ensp;</text>
+                    <text class="comment_count">{{item.commentCount}}条弹幕</text>
+                </view>
+            </view>
+        </navigator>
+    </view>
+    <view class="comment_wrap">
+        <view class="comment_title">评论 （{{commentData.commentTotalCount}}）</view>
+        <!-- <view class="comment_list"></view> -->
+        <view wx:for="{{commentData.commentList}}" wx:key="index" class="comment_item">
+            <view class="user_icon">
+                <image src="{{item.userIconSrc}}" mode="widthFix"></image>
+            </view>
+            <view class="comment_info">
+                <view class="comment_detail">
+                    <text class="username">{{item.username}}</text>
+                    <text class="commentDate">{{item.commentDate}}</text>
+                </view>
+                <view class="comment_content">{{item.commentInfo}}</view>
+            </view>
+        </view>
+    </view>
+</view>

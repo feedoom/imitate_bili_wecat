@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "仿bili",
+  "usingComponents": {
+    "MyTitle": "../../components/MyTitle/MyTitle"
+  }
+}
